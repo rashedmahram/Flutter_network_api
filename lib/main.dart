@@ -32,4 +32,3 @@ class HomeScreen extends StatelessWidget {
     ));
   }
 }
-// https://earthquake.usgs.gov/fdsnws/event/1/application.json
