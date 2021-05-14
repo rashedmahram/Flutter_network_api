@@ -1,16 +1,18 @@
-# earth_quake_app
+# COVID-19 App - Flutter UI
 
-A new Flutter project.
+## [Watch it on YouTube](https://youtu.be/axWBN1aotQk)
 
-## Getting Started
+**Packages we are using:**
 
-This project is a starting point for a Flutter application.
+- flutter_svg: [link](https://pub.dev/packages/flutter_svg)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+**UI Credit**
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Design by: Tushar Imran [link](https://www.uplabs.com/posts/corona-virus-update-app)
+
+We design two pages on the home page you gonna see all statistics like how many totals affected, total recovery, total death at the bottom how you can prevent them with a hotline number if you fall sick, and face any COVID-19 symptoms just make a call. On another page, it's gonna show you each day affected statistic.
+
+### COVID-19 App Final UI
+
+![App UI](/UI.png)
