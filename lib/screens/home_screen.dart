@@ -1,3 +1,4 @@
+import 'package:earth_quake_app/screens/details_screen.dart';
 import 'package:earth_quake_app/widgets/info_card.dart';
 import 'package:earth_quake_app/widgets/preventions_card.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,16 @@ class HomeScreen extends StatelessWidget {
                   title: "Confirmed Cases",
                   effectNumber: 1605,
                   iconColor: Color(0xffff9c00),
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return DetailsScreen();
+                        },
+                      ),
+                    );
+                  },
                 ),
                 InfoCard(
                   title: "Total Deaths",
@@ -50,22 +61,24 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          Column(
-            children: [
-              SizedBox(
-                height: 20,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Text(
-                  "Preventions",
-                  style: Theme.of(context).textTheme.headline6.copyWith(fontWeight: FontWeight.bold),
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 20,
                 ),
-              ),
-              buildPreventionsCard(),
-              SizedBox(height: 20),
-              buildHelpCard(context),
-            ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Text(
+                    "Preventions",
+                    style: Theme.of(context).textTheme.headline6.copyWith(fontWeight: FontWeight.bold),
+                  ),
+                ),
+                buildPreventionsCard(),
+                SizedBox(height: 20),
+                buildHelpCard(context),
+              ],
+            ),
           ),
         ],
       ),
