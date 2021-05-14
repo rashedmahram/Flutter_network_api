@@ -1,3 +1,5 @@
+import 'package:earth_quake_app/constants.dart';
+import 'package:earth_quake_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,18 +13,11 @@ class MyApp extends StatelessWidget {
       title: 'Covid App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
+        textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
       home: HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(),
     );
   }
 }

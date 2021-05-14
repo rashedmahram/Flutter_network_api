@@ -25,8 +25,9 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   dio: ^4.0.0
+  flutter_svg: ^0.22.0
   http: ^0.13.3
-  fl_chart: ^0.9.3
+  fl_chart: ^0.36.1
 
 dev_dependencies:
   flutter_test:
