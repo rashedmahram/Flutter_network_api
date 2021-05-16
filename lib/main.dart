@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(displayColor: kTextColor),
       ),
       home: HomeScreen(),
+      // Text
     );
   }
 }
