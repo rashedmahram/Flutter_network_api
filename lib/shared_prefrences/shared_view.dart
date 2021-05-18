@@ -13,10 +13,7 @@ class _SharedViewState extends State<SharedView> {
 
   Future<void> _getInstanceSharedView() async {
     _preferences = await SharedPreferences.getInstance();
-    _preferences.setString("data", "Ali");
-    var dd = _preferences.getString("data");
-    print(dd);
-    print("Done");
+    _preferences.setString("key", "Ali");
   }
 
   @override
