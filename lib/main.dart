@@ -1,12 +1,11 @@
-import 'dart:convert';
-
+import 'package:earth_quake_app/shared_prefrences/shared_view.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-// TODO: create list; [DONE]
-// TODO: add data form map; [DONE]
-// TODO: add data form json; [DONE]
+// [TODO: create list; [DONE]]
+// [TODO: add data form map; [DONE]
+// [TODO: add data form json; [DONE]
 // TODO: create data by json;
 // TODO: update data by json;
 // TODO: search data by json;
@@ -15,38 +14,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Netwrok App',
-      home: Scaffold(
-        body: SafeArea(
-          child: ListViewFromList(),
-        ),
-      ),
-    );
-  }
-}
-
-class ListViewFromList extends StatelessWidget {
-  const ListViewFromList({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return FutureBuilder(
-      // what is the FutureBuilder ???
-      future: DefaultAssetBundle.of(context).loadString("assets/data.json"),
-
-      builder: (context, snapshot) {
-        var showData = json.decode(snapshot.data.toString());
-        return ListView.builder(
-          itemCount: showData.length,
-          itemBuilder: (BuildContext context, index) {
-            return ListTile(
-              title: Text(showData[index]["name"]),
-              subtitle: Text(showData[index]["city"]),
-            );
-          },
-        );
+      initialRoute: '/shared',
+      routes: {
+        '/shared': (context) => SharedView(),
       },
     );
   }
