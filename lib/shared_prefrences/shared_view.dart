@@ -1,3 +1,4 @@
+import 'package:earth_quake_app/screens/city_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
@@ -47,6 +48,17 @@ class _SharedViewState extends State<SharedView> {
             color: Colors.green,
             child: Text("Save Shared Prefrences"),
           ),
+          TextButton(
+            onPressed: () {
+              Navigator.pop(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CityScreen(),
+                ),
+              );
+            },
+            child: Text("City Page"),
+          )
         ],
       ),
     ));
