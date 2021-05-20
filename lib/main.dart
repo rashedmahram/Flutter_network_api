@@ -1,10 +1,13 @@
 import 'package:earth_quake_app/screens/city_screen.dart';
+import 'package:earth_quake_app/screens/hive/hive_example.dart';
 import 'package:earth_quake_app/screens/shared_preferences/all_about_sharedpreferences.dart';
 import 'package:earth_quake_app/screens/shared_preferences/home_screen.dart';
 import 'package:earth_quake_app/shared_prefrences/shared_view.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  runApp(MyApp());
+}
 
 // [TODO: create list; [DONE]]
 // [TODO: add data form map; [DONE]
@@ -19,12 +22,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Netwrok App',
-      initialRoute: '/sharedPre',
+      initialRoute: '/hive',
       routes: {
         '/shared': (context) => SharedView(),
         '/city': (context) => CityScreen(),
         '/sharedPref': (context) => SharedDataScreen(),
         '/sharedPre': (context) => SharedPref(),
+        '/hive': (context) => HiveQuestions(),
       },
     );
   }
