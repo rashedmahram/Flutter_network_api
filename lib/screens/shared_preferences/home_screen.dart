@@ -60,15 +60,13 @@ class _SharedDataScreenState extends State<SharedDataScreen> {
                           _myKey = keyController.text;
                           _myValue = valueController.text;
                         });
-                      keyController.text = "";
+                        keyController.text = "";
                         valueController.text = "";
                       },
                       child: Icon(Icons.save_rounded),
                     ),
                     FloatingActionButton(
-                      onPressed: () {
-                        
-                      },
+                      onPressed: () {},
                       child: Icon(Icons.download_rounded),
                     ),
                   ],

@@ -1,4 +1,5 @@
 import 'package:earth_quake_app/screens/city_screen.dart';
+import 'package:earth_quake_app/screens/shared_preferences/all_about_sharedpreferences.dart';
 import 'package:earth_quake_app/screens/shared_preferences/home_screen.dart';
 import 'package:earth_quake_app/shared_prefrences/shared_view.dart';
 import 'package:flutter/material.dart';
@@ -18,11 +19,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Netwrok App',
-      initialRoute: '/sharedPref',
+      initialRoute: '/sharedPre',
       routes: {
         '/shared': (context) => SharedView(),
         '/city': (context) => CityScreen(),
         '/sharedPref': (context) => SharedDataScreen(),
+        '/sharedPre': (context) => SharedPref(),
       },
     );
   }
